@@ -16,9 +16,18 @@ An option is to use ionic-appauth (https://www.npmjs.com/package/ionic-appauth) 
 
 AppAuth is a client for communicating with OAuth 2.0 and OpenID Connect providers. OpenID Connect is a MS recommendation if we are building a web application that is hosted on a server and accessed via a browser. https://docs.microsoft.com/en-us/azure/active-directory/develop/v1-protocols-openid-connect-code
 
-Even though  
+Even though ionic-appauth has all the pieces to build an authentication service, it has little documentation and it is not easy to built as an angular module that can easily used by an ionic project
 
-# Mobauth
+We try to help in this last mile
+
+# Quickstart
+
+## Create a new ionic project
+$ ionic start mobauth-demo blank
+
+## Install mobauth
+$ npm i mobauth --save
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
 
