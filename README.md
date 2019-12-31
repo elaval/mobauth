@@ -1,3 +1,23 @@
+# mobauth
+This is an Angular module that facilitates user authentication against Microsoft Azure AD using Open ID in ionic/cordova mobile Apps
+
+## Context
+On Ionic 4 projects you could authenticate using MS-ADAl plugin https://ionicframework.com/docs/native/ms-adal, but that plugin has 2 problems:
+- It is no longer mantained by MS (and the git repository has been archived)
+- It does not work well on iPhone Apps built with xCode 10.4 (it still works if you use xCode 10.3)
+
+ADAL (Azure Directory Authentication Library) was created to work with AD accounts via the 1.0 endpoint
+MSAL works via MS identity platform (formally the Azure AD v2.0 endpoint)
+(https://docs.microsoft.com/en-us/azure/active-directory/develop/migrate-objc-adal-msal)
+
+But unfortunately at this time (Dec 2019) there is no ionic plugin for MSAL (and have not read any plan to build it by MS).
+
+An option is to use ionic-appauth (https://www.npmjs.com/package/ionic-appauth) which is an implementation of  AppAuth-JS (https://github.com/openid/AppAuth-JS) for ionic users.
+
+AppAuth is a client for communicating with OAuth 2.0 and OpenID Connect providers. OpenID Connect is a MS recommendation if we are building a web application that is hosted on a server and accessed via a browser. https://docs.microsoft.com/en-us/azure/active-directory/develop/v1-protocols-openid-connect-code
+
+Even though  
+
 # Mobauth
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
