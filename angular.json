@@ -2,5 +2,41 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
-  "projects": {}
+  "projects": {
+    "mobauth": {
+      "projectType": "library",
+      "root": "projects/mobauth",
+      "sourceRoot": "projects/mobauth/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/mobauth/tsconfig.lib.json",
+            "project": "projects/mobauth/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/mobauth/src/test.ts",
+            "tsConfig": "projects/mobauth/tsconfig.spec.json",
+            "karmaConfig": "projects/mobauth/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/mobauth/tsconfig.lib.json",
+              "projects/mobauth/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }},
+  "defaultProject": "mobauth"
 }

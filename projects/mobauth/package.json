@@ -1,0 +1,15 @@
+{
+  "name": "mobauth",
+  "version": "0.2.0",
+  "peerDependencies": {
+    "@angular/common": "^8.2.14",
+    "@angular/core": "^8.2.14",
+    "@ionic/angular": "^4.11.7",
+    "@ionic/storage": "^2.2.0",
+    "ionic-appauth": "^0.4.4",
+    "jwt-decode": "^2.2.0"
+  },
+  "dependencies": {
+
+  }
+}
